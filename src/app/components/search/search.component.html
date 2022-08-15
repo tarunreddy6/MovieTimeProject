@@ -1,0 +1,22 @@
+<header class="header-desktop">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+
+            <div class="header-wrap">
+                <form class="form-header" #searchform="ngForm" (submit)="search()" method="GET">
+                    <input class="au-input au-input-xl" type="text"name="search"
+                        placeholder="Search for employee ..."[(ngModel)] = "searchName"/>
+                    <button class="au-btn-submit" type="submit">
+                        Search
+                    </button>
+                </form>
+                    <br><br>
+                    <button class="btn btn-Primary" (click)="show1()">Register</button>  
+                    <button class="btn btn-Danger" (click)="show2()">Login</button>  
+                    <button class="btn btn-Danger" (click)="show3()">Logout</button> 
+            </div>
+            <div class="account-wrap"></div>
+        </div>
+    </div>
+</header>
+

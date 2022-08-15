@@ -1,0 +1,27 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid"> 
+              <table class='table table-bordered'>
+                <thead>
+                    <tr class='table-dark'>
+                        <th>Name</th>
+                        <th>Department Id</th>
+                        <th>Job</th>
+                        <th>Manager Id </th>
+                        <th>Image</th>
+                    </tr>
+            
+                </thead>
+              <tbody>
+                <tr  *ngFor="let emp of employees">
+                    <td>{{emp.ename}}</td>
+                    <td>{{emp.dept_id}}</td>
+                    <td>{{emp.job}}</td>
+                    <td>{{emp.mgr}}</td>
+                    <td><img src={{emp.image_path}}></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

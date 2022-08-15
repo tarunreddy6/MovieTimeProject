@@ -1,0 +1,51 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            <h2>Add Employee</h2>
+            <br>
+            <form #empform="ngForm" novalidate (ngSubmit)="onSubmit()">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Name:</td><td><input type="text" name="ename" [(ngModel)]="employee.ename"/></td>
+                        </tr>
+                        <br><br>
+                        <tr>
+                            <td>Job:</td><td><input type="text" name="job" [(ngModel)]="employee.job"/></td>
+                        </tr>
+                        <br><br>
+                        <tr>
+                            <td>Department:</td>
+                            <td>
+                                <select name="deptId" [(ngModel)]="employee.dept_id">
+                                    <option value="101">Admin</option>
+                                    <option value="102">Sales</option>
+                                    <option value="103">Developers</option>
+                                    <option value="104">Operations</option>
+                                    <option value="105">Research</option> 
+                                    <option value="106">Accounting</option>                                   
+                                </select>
+                            </td>
+                        </tr>
+                        <br><br>
+                        <tr>
+                            <td>Salary:</td><td><input type="text" name="salary" [(ngModel)]= "employee.sal"/></td>
+                        </tr>
+                        <br><br>
+                        <tr>
+                            <td>Commission:</td><td><input type="text" name="commission" [(ngModel)]="employee.comm"/></td>
+                        </tr>
+                        <br><br>
+                        <tr>
+                            <td>Hire Date:</td><td><input type="datetime-local"  name="hiredate" [(ngModel)]="employee.hiredate" /></td>
+                        </tr>
+                        <br><br>
+                        <tr>
+                            <td><button class="btn btn-info" type="submit">Submit</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>
