@@ -1,0 +1,42 @@
+<div class="col-sm-3">
+    <table style="color:rgb(0, 0, 0)">
+        <tr>
+            <td><b>UPI Payments</b></td>
+            <td>
+                <select>
+                    <option value="101">Google Pay</option>
+                    <option value="102">Phonepay</option>
+                    <option value="103">AmazonPay</option>
+                    <option value="104">Paytm</option>
+                </select>
+            </td>
+           <td> <input type="text" placeholder=" Enter Upi Id"></td>
+        </tr>
+        <tr><br></tr><tr><br></tr>
+        <tr><td><b>Internet Banking</b></td>
+            <td>
+                <input type="radio" value="101">SBI
+                <input type="radio" value="101">Axis
+                <input type="radio" value="101">HDFC
+                <input type="text" placeholder=" User Id">&nbsp;
+                <input type="text" placeholder=" Password">
+                &nbsp;
+            </td>
+        </tr>
+        
+        
+        <tr><br></tr>
+        <tr>
+            <td><b>Card Details</b></td>
+            <td><input type="text" placeholder=" Enter Card Number">&nbsp;
+            <input type="text" placeholder=" Expiry date">&nbsp;                            
+            <input type="text" placeholder=" Enter CVV">&nbsp;                            
+            <input type="text" placeholder=" Enter Card Name">&nbsp;                    
+            </td>
+        </tr>
+        <tr><br></tr>
+        <tr> &nbsp;&nbsp;&nbsp;&nbsp;
+            <td><button class="btn btn-lg btn-success" (click)="pay()">Pay Now</button></td>
+        </tr><br>
+    </table>
+  </div>

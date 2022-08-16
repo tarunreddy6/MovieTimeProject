@@ -1,0 +1,50 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            
+            <div class="col-md-3" *ngFor="let movie of movies">
+                <img src={{movie.image_path}} alt="Unable to Load!" class="img-rounded" style="width: 250px; height: 350px"/>
+                <h4>{{movie.moviename}}</h4>
+                <form #bookform="ngForm" novalidate (ngSubmit)="onSubmit()">
+                    <button type="button" class="btn btn-danger btn-md" (click)="booktickets(movie.movie_id)">Book Tickets</button>
+                </form><strong><hr></strong><br>
+            </div>
+
+
+
+
+           <!-- <div class="col-md-3" *ngFor="let movie of movies">
+                <img src={{movie.image_path}} alt="Unable to Load!" class="img-rounded" style="width: 250px; height: 350px">
+                <h4>{{movie.moviename}}</h4>
+                
+                <form #bookform="ngForm" novalidate (ngSubmit)="onSubmit()">
+                <div>
+                    <button class="btn btn-danger btn-lg " (click)="booktickets(movie.movie_id)">Book tickets</button> 
+                </div> 
+                </form>
+            </div>-->
+
+
+
+    <!--          <table class='table table-bordered'>
+                <thead>
+                    <tr class='table-dark'>
+                        <th>Movie Name</th>
+                        <th>language</th>
+                        <th>Ticket Price</th>
+                        <th>Image</th>
+                    </tr>
+            
+                </thead>
+              <tbody>
+                <tr  *ngFor="let movie of movies">
+                    <td>{{movie.moviename}}</td>
+                    <td>{{movie.language}}</td>
+                    <td>{{movie.priceperticket}}</td>
+                    <td><img src={{movie.image_path}}></td>
+                    </tr>
+                </tbody>
+            </table> -->
+        </div>
+    </div>
+</div>

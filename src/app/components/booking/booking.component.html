@@ -1,0 +1,50 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container" style="background-color:rgb(209, 208, 186);border-radius:20px;">
+            <br>
+            <div class="row col-sm-6">
+                <!--<div *ngFor="let movie of movies"> -->
+                    <form #updateform="ngForm" novalidate (ngSubmit)="onSubmit()">
+                        <table style="color:rgb(172, 11, 43)">
+                            <tr>
+                                <td><p style="margin-top:10%"><img src={{movie.image_path}} alt=" unable to load" 
+                                    class="img-rounded" width="300px" style="width: 125px; height: 127px"></p></td>
+                            </tr>
+                            <br>
+                            <tr>
+                                <td>Movie:</td>
+                                <td><b>{{movie.moviename}}</b></td>
+                            </tr>
+                            <tr><td> <br><br></td></tr>
+                            <tr>
+                                <td>Ticket Price:</td>
+                                <td><b>{{movie.priceperticket | currency:'INR'}}</b></td>
+                            </tr>
+                            <tr><td> <br><br></td></tr>
+                            <tr>
+                                <td>Tickets:</td>
+                                <td> 
+                                    <button type="submit" class="Increment p-0" (click)="decrement(count)">-</button> &nbsp; <b>{{count}}</b> &nbsp;
+                                    <button type="submit" class="Increment p-0" (click)="increment(count)">+</button>
+                                </td>
+                            </tr>
+                            <tr><td> <br><br></td></tr>
+                            <tr>
+                                <td>Total Amount:</td>
+                                <td><b>{{movie.priceperticket*count | currency:'INR'}}</b></td>
+                            </tr>
+                            <br><br>                            
+                        </table>
+                    </form>
+                    
+                    <div>
+                        <button class="btn btn-lg btn-warning" (click)="pay1()">Proceed to pay</button> &nbsp;&nbsp;
+                        <button class="btn btn-lg btn-warning" (click)="pay2()">Cancle</button>
+                        
+                    </div>
+                    <br><br>
+                                  
+            </div>
+        </div>
+    </div>
+</div>

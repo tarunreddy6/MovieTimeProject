@@ -1,0 +1,64 @@
+
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+
+            <div class="vid-container"> 
+                <div class="inner-container">
+                    <div class="box">
+                        <h1>Login</h1>
+                        <form #loginform="ngForm" novalidate (ngSubmit)="onSubmit()">
+                            <input type="text" placeholder="Email" name="email" [(ngModel)]="user.email"/>
+                            <input type="password" placeholder="Password" name="pwd" [(ngModel)]="user.password"/>
+                            <input type="text" placeholder="usertype" name="u_type" [(ngModel)]="user.usertype"/>
+                            <button>Login</button>
+                            <a
+                                [routerLink]="['/user']"
+                                class="nav-link focus--box-shadow"
+                                role="menuitem"
+                                aria-label="Favorite projects"
+                                >
+                                <p (click)="show2()">Not a member? Sign Up</p> 
+                            </a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--
+            <h3>Login</h3>
+
+                <hr>
+                <form #loginform="ngForm" novalidate (ngSubmit)="onSubmit()">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Email:</td><td><input type="text" name="email" [(ngModel)]="user.email"/></td>
+                            </tr>
+                            <tr><br></tr>
+                            <tr>
+                                <td>Password:</td><td><input type="password" name="pwd" [(ngModel)]="user.password"/></td>
+                            </tr>
+                            <tr><br></tr>
+                            <tr>
+                                <td>UserType:</td><td><input type="text" name="u_type" [(ngModel)]="user.usertype"/></td>
+                            </tr>
+                            <tr>
+                                <td><button class="btn btn-info" type="submit">Login</button></td>
+                            </tr>
+                            <tr><br></tr>
+                            <tr>
+                                <td>UserType:</td><td><input type="text" name="u_type" [(ngModel)]="user.usertype"/></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+        </div>
+    </div>
+</div> 
+<img src="assets/icon/movie-film.png" alt="" />
+-->
+  

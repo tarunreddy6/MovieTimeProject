@@ -1,0 +1,48 @@
+<div class="main-content">
+  <div class="section-content section-content-p30">
+    <div class="container-fluid">
+        <h3>Add New Movie</h3>
+        <hr>
+        <form #movieform="ngForm" novalidate (ngSubmit)="onSubmit()">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name:</td><td><input type="text" name="moviename" [(ngModel)]="movie.moviename"/></td>
+                    </tr>
+                    <tr><br></tr>
+                    <tr>
+                        <td>Language:</td><td><input type="text" name="language" [(ngModel)]="movie.language"/></td>
+                    </tr>
+                    <tr><br></tr>
+                    <tr>
+                        <td>Gerner:</td>
+                    <td>
+                        <select name="mcid" [(ngModel)]="movie.mcid">
+                            <option value="11">Action</option>
+                            <option value="12">Drama</option>
+                            <option value="13">Scifi</option>
+                            <option value="14">Adventure</option>
+                            <option value="15">Thriller</option>
+                            <option value="16">Comedy</option>
+                            <option value="17">Horror</option>
+                        </select>
+                    </td>
+                    </tr>
+                    <tr><br></tr>
+                    <tr>
+                        <td>Ticket Price:</td><td><input type="text" name="pricepreticket" [(ngModel)]="movie.priceperticket"/></td>
+                    </tr>
+                    <tr><br></tr>
+                    <tr>
+                        <td>Image</td><td><input type="file" name="myImage" accept="image/x-png,image/gif,image/jpeg" [(ngModel)]="movie.image_path"/></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn btn-info btn-lg" type="submit">Submit</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+        
+    </div>
+  </div>
+</div>

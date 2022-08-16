@@ -1,0 +1,58 @@
+<header class="header-desktop">
+
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-dark fixed-top">
+
+        <div class="navbar-left">
+          <a class="navbar-brand" href="http://localhost:4200/movies-details">
+            <i><img src="assets/images/movitimelogo.jpg" alt="MovieTimes"/></i>
+          </a>
+        </div>
+      
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div>
+          <ul class="navbar-nav mb-lg-0" id=" navbar-nav primary-menu mr-auto">
+            <li class="nav-item">
+              <a routerLinkActive="active" class="nav-link active" href="http://localhost:4200/"> Home </a>
+            </li>
+      
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      
+            <li class="nav-item">
+              <a [routerLink]="['']" 
+                 class="nav-link active" href="http://localhost:4200/movies-details"> Movies </a>
+            </li>
+          </ul>
+        </div>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+      <div class="navbar-collapse form-header" >
+        <form class="d-flex" #searchform="ngForm" (submit)="search()" method="GET">
+            <input class="form-control me-2" type="text" name="search" placeholder="Search for Movies"
+                   aria-label="Search" [(ngModel)] = "searchName"/>
+            <button class="btn btn-danger" type="submit">Search</button>
+        </form>
+    </div>
+
+    <div class="navbar-left">
+      <button class="btn btn-danger btn-lg"(click)="show1()">Login</button>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+    <!--    <button class="btn btn-Danger" (click)="show2()">Register</button>   -->
+      <button class="btn btn-danger btn-lg " (click)="show3()">Logout</button>
+    </div>
+  </nav>
+    
+        
+    <!--    <form class="form-header" #searchform="ngForm" (submit)="search()" method="GET">
+            <input class="au-input au-input-xl" type="text"name="search"
+                placeholder="Search for Movie ..."[(ngModel)] = "searchName"/>
+            <button class="au-btn-submit" type="submit">
+                Search
+            </button>
+        </form>
+    -->
+
+    
+        
+        
+    <div class="account-wrap"></div>
+</header>
